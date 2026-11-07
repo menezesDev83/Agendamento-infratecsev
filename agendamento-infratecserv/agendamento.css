@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+ 
+body {
+    font-family: "Poppins", "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+    color: #14182b;
+    background: #cfe0fb;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+ 
+a:focus-visible {
+    outline: 3px solid #1a6dff;
+    outline-offset: 3px;
+}
+ 
+nav {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    gap: 20px;
+    margin: 0 24px;
+}
+ 
+nav a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 2px;
+    color: #0d1b3d;
+    text-decoration: none;
+    font-weight: 500;
+}
+ 
+nav a:first-child {
+    margin-left: auto;
+}
+ 
+nav a:nth-child(3) {
+    margin-right: auto;
+}
+ 
+nav a:not(.botao):not(.whatsapp):not(.instagram) {
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+ 
+nav a:not(.botao):not(.whatsapp):not(.instagram):hover {
+    color: #1a6dff;
+    border-color: #1a6dff;
+}
+
+.botao,
+.whatsapp,
+.instagram {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 0 20px;
+    height: 46px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(6, 33, 79, 0.2);
+}
+ 
+.botao i,
+.whatsapp i,
+.instagram i {
+    font-size: 1.4rem;
+}
+ 
+.whatsapp {
+    margin-left: auto;
+    background-color: #20c15a;
+}
+ 
+ 
+.instagram {
+    margin-left: 0;
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf);
+}
+ 
+header {
+    background-color: #ffffff;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 8px 3%;
+    box-shadow: 0 2px 12px rgba(6, 33, 79, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+ 
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+ 
+#logo img {
+    max-height: 68px;
+    width: auto;
+    gap: 10px;
+}
+ 
+span{
+    color: #1a6dff;
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+ 
+.destaque {
+    color: #0d1b3d;
+    font-weight: 500;
+}
+ 
+#menu {
+    display: flex;
+    gap: 20px;
+}
+
+main {
+    max-width: 1900px;
+    width: 100%;
+    margin: auto;
+    flex: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+
+}
+
+#slider {
+    grid-area: slider;
+    position: relative;
+    overflow: hidden;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px clamp(24px, 5vw, 64px);
+    color: #ffffff;
+    background: linear-gradient(120deg, #021432, #0a3a8a);
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    border-radius: 0;
+}
+
+#slider img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right center;
+    z-index: 0;
+}
+
+#slider::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(90deg, #021432 0%, rgba(2, 20, 50, 0.92) 35%, rgba(2, 20, 50, 0) 75%);
+}
+
+#slider h1,
+#slider p,
+#slider span {
+    position: relative;
+    z-index: 2;
+    max-width: 640px;
+}
+
+#slider h1, 
+#slider span{
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    font-weight: 600;
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+}

@@ -1,0 +1,215 @@
+/* ==========================================================================
+   INFRATEC ❄️⚡ | Projetos & Assistência Técnica em Refrigeração
+   Modern Futuristic Frost & Neon Stylesheet
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;600;700&display=swap');
+
+:root {
+  --color-cyan: #00D2FF;
+  --color-cyan-glow: rgba(0, 210, 255, 0.5);
+  --color-blue-dark: #0077B6;
+  --color-ice: #7DD3FC;
+  --bg-dark: #070B14;
+  --bg-surface: #0B1222;
+  --bg-card: rgba(13, 21, 39, 0.82);
+  --border-cyan: rgba(0, 210, 255, 0.22);
+  --border-cyan-active: rgba(0, 210, 255, 0.8);
+}
+
+* {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, .brand-font {
+  font-family: 'Outfit', sans-serif;
+}
+
+.mono-font {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: #F1F5F9;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #070B14;
+}
+::-webkit-scrollbar-thumb {
+  background: #0077B6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #00D2FF;
+}
+
+/* Glassmorphism Frosted Cards */
+.frost-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-cyan);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.frost-card:hover {
+  border-color: rgba(0, 210, 255, 0.55);
+  box-shadow: 0 0 30px rgba(0, 210, 255, 0.2);
+}
+
+/* Neon Glows */
+.neon-glow {
+  box-shadow: 0 0 25px rgba(0, 210, 255, 0.35);
+}
+
+.neon-glow-strong {
+  box-shadow: 0 0 35px rgba(0, 210, 255, 0.65), 0 0 70px rgba(0, 210, 255, 0.25);
+}
+
+.neon-text {
+  text-shadow: 0 0 15px rgba(0, 210, 255, 0.7);
+}
+
+.neon-border {
+  border: 1px solid #00D2FF;
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.3);
+}
+
+/* Mesh Background */
+.bg-mesh {
+  background: radial-gradient(circle at 15% 20%, rgba(0, 210, 255, 0.12) 0%, transparent 45%),
+              radial-gradient(circle at 85% 75%, rgba(0, 119, 182, 0.18) 0%, transparent 50%),
+              radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.05) 0%, transparent 65%),
+              #070B14;
+}
+
+/* Animations */
+@keyframes icePulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(0, 210, 255, 0.35);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(0, 210, 255, 0.75);
+    transform: scale(1.015);
+  }
+}
+
+.animate-ice-pulse {
+  animation: icePulse 3.5s infinite ease-in-out;
+}
+
+@keyframes floatSlow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-float {
+  animation: floatSlow 4s infinite ease-in-out;
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-spin-slow {
+  animation: spinSlow 30s linear infinite;
+  transform-origin: center center;
+}
+
+/* Wizard Step Progress */
+.step-dot.active {
+  background-color: #00D2FF;
+  border-color: #FFFFFF;
+  box-shadow: 0 0 20px #00D2FF;
+  color: #070B14;
+}
+
+.step-dot.completed {
+  background-color: #0284C7;
+  border-color: #38BDF8;
+  color: #FFFFFF;
+}
+
+/* Custom form inputs */
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  background-color: rgba(11, 18, 34, 0.9);
+  border: 1px solid rgba(56, 189, 248, 0.25);
+  color: #F8FAFC;
+  transition: all 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="date"]:focus,
+input[type="number"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #00D2FF;
+  box-shadow: 0 0 18px rgba(0, 210, 255, 0.4);
+  outline: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) hue-rotate(180deg) brightness(1.5);
+  cursor: pointer;
+}
+
+/* Service Card selection in wizard */
+.service-select-btn {
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.service-select-btn:hover {
+  transform: translateY(-3px);
+  border-color: rgba(0, 210, 255, 0.6);
+}
+
+.service-select-btn.selected {
+  border-color: #00D2FF !important;
+  background: rgba(0, 210, 255, 0.14) !important;
+  box-shadow: 0 0 25px rgba(0, 210, 255, 0.35);
+}
+
+/* Floating WhatsApp badge */
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 999;
+}
+
+/* Print styles for booking confirmation */
+@media print {
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+  header, footer, .whatsapp-float, .no-print {
+    display: none !important;
+  }
+  .voucher-container {
+    border: 2px solid #0284C7 !important;
+    color: #000000 !important;
+    background: #FFFFFF !important;
+    box-shadow: none !important;
+  }
+}

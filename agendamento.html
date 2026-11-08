@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento infratecserv</title>
+    <link rel="stylesheet" href="agendamento.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+   <link rel="shortcut icon" href="imagens/flavicon infratecserv fundo transparente.png" type="image/png">
+  <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div id="logo"> 
+        <img src="imagens/emblema infratecserv  transparente.png" alt="logo">  
+       <span>
+         INFRATECSERV <span class="destaque">.com</span>
+       </span>
+           
+        </div>
+     <nav>
+    <a href="#sobre"><i class="fa-solid fa-house" aria-hidden="true"></i> Sobre nós</a>
+
+    <a href="#serviços"><i class="fa-solid fa-gear" aria-hidden="true"></i> Serviços</a>
+     
+    <a href="#agendamento"><i class="fa-solid fa-calendar-days" aria-hidden="true"></i> Agendamento</a>
+
+    <a class="whatsapp" href="https://wa.me/5579991132770">
+    <i class="fa-brands fa-whatsapp"></i>
+    Fale conosco
+     </a>
+
+     <a class="instagram" href="https://www.instagram.com/infratecserv/">
+     <i class="fa-brands fa-instagram"></i>
+     Instagram
+    </a>
+    </header>
+
+    <main>
+       <div>
+        <section>
+        <div id="slider">
+        <h1>Tudo que sua
+        <span>infraestrutura</span> 
+          precisa
+        </h1>
+        <p>Soluções completas em refrigeração,
+           com qualidade, agilidade e confiança.
+        </p>
+         <button id="botao-agendamento" type="button">📅 Solicitar Agendamento ➜</button>
+        <img src="imagens/slider infratecserv.jpeg" alt="slider infratecserv">
+       
+        
+
+     </div>
+      </section>
+
+     
+        
+        <div id="conteudo">
+        <h1>Nossos</h1> <span>Serviços</span>
+       
+       <p>Oferecemos os melhores serviços em refrigeração:</p>
+         <ul id="serviços">
+          <li> <i class="fa-regular fa-snowflake" aria-hidden="true"></i> instalação de ar-condicionado</li>
+          <li><i class="fa-solid fa-wrench" aria-hidden="true"></i>Manutenção preventiva</li>
+          <li><i class="fa-solid fa-gear" aria-hidden="true"></i>Manutenção corretiva</li>
+          <li><i class="fa-solid fa-droplet" aria-hidden="true"></i>Higienização de equipamentos</li>
+          <li><i class="fa-solid fa-temperature-arrow-down" aria-hidden="true"></i>Serviços de refrigeração</li>
+          
+
+
+
+
+         </ul>
+         <div>
+        <section>
+        <div id="sobre">
+          <img src="imagens/slider sobre nós.jpeg" alt="sobre nós">
+         <h1>Sobre a <span>Infratecserv</span></h1>
+          <p>Somos uma empresa especializada em soluções 
+             refrigeração, oferecendo serviços em alta
+             qualidade para residencidências e empresas.
+             Nosso compromisso é garantir seu conforto e
+             bem-estar em todas as estações.
+          </p>
+          <ul id="checklist">
+            <li><i class="fa-solid fa-circle-check"></i>Equipe especializada</li>
+            <li><i class="fa-solid fa-circle-check"></i>Atendimento ágil</li>
+            <li><i class="fa-solid fa-circle-check"></i>Qualidade garantida</li>
+          </ul>
+        </div>
+        </section>
+        </div>
+
+        <div>
+       <div>
+         <section>
+          <div id="agendamento">
+            <div class="icone-agendamento">
+             <i class="fa-regular fa-calendar-days"></i>
+             <i class="fa-regular fa-clock"></i>
+            </div>
+
+            <h2>Agende seu <span>atendimento</span></h2>
+            <p>Preencha os dados abaixo e solicite seu serviço:</p>
+
+            <form id="form-agendamento" novalidate>
+              <input type="text" id="nome" placeholder="Nome completo" aria-label="Nome completo" autocomplete="name" required>
+              <input type="tel" id="telefone" placeholder="Telefone / WhatsApp" aria-label="Telefone / WhatsApp" autocomplete="tel" required>
+
+              <select id="servico" aria-label="Tipo de serviço" required>
+                <option value="">Tipo de serviço</option>
+                <option>Instalação de ar-condicionado</option>
+                <option>Manutenção preventiva</option>
+                <option>Manutenção corretiva</option>
+                <option>Higienização de equipamentos</option>
+                <option>Outros serviços</option>
+              </select>
+              <input type="text" id="endereco" placeholder="Endereço do atendimento" aria-label="Endereço do atendimento" autocomplete="street-address" required>
+
+              <input type="date" id="data" aria-label="Data desejada" required>
+              <input type="time" id="horario" aria-label="Horário desejado" required>
+
+              <textarea id="observacoes" placeholder="Observações (opcional)" aria-label="Observações"></textarea>
+
+              <button type="submit">Solicitar Agendamento</button>
+              <p id="aviso" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+         </section>
+        </div>
+ 
+      
+
+
+
+            
+    </main>
+    <footer>
+<div class="footer-container">
+    <div class="bloco-1">
+      <img src="imagens/emblema infratecserv  transparente.png" alt="emblema infratecserv">
+      <div class="logo-texto">
+        <span class="logo">
+          <span class="marca">Infratecserv</span><span>.com</span>
+        </span>
+        <p>Conforto e eficiência em um só lugar.</p>
+      </div>
+    </div>
+        <div class="bloco-2">
+        <i class="fa-solid fa-phone"></i> <i class="fa-brands fa-whatsapp"></i><p>(79) 99113-2770</p> 
+       </div>
+        <div class="bloco-3">
+        <i class="fa-brands fa-instagram instagram-icon"></i> <p>@Infratecserv</p>
+       </div>
+        <div class="bloco-4">
+        <i class="fa-solid fa-location-dot"></i> <p>Aracaju-SE</p>
+       </div>
+        <div class="bloco-5">
+         <p>Siga-nós:</p> <i class="fa-brands fa-instagram instagram-icon"></i>
+       </div>
+       <div class="bloco-6">
+         <p>© 2026 Todos os direitos reservados.</p>
+
+       </div>
+    </footer>
+    
+</body>
+</html>
